@@ -88,8 +88,7 @@ class Tela_gerar_senha(object):
         font.setBold(True)
         font.setWeight(75)
         self.pushButton_copiar.setFont(font)
-        self.pushButton_copiar.setStyleSheet("background: #0BAEE1; \n"
-"border-radius: 10px;")
+        self.pushButton_copiar.setStyleSheet("QPushButton{ background: #0BAEE1;border-radius: 10px;}QPushButton:hover{color: white;}")
         self.pushButton_copiar.setObjectName("pushButton_copiar")
         self.pushButton_gera = QtWidgets.QPushButton(self.centralwidget)
         self.pushButton_gera.setGeometry(QtCore.QRect(450, 140, 71, 41))
@@ -98,8 +97,7 @@ class Tela_gerar_senha(object):
         font.setBold(True)
         font.setWeight(75)
         self.pushButton_gera.setFont(font)
-        self.pushButton_gera.setStyleSheet("background: #0BAEE1; \n"
-"border-radius: 10px;")
+        self.pushButton_gera.setStyleSheet("QPushButton{ background: #0BAEE1;border-radius: 10px;}QPushButton:hover{color: white;}")
         self.pushButton_gera.setObjectName("pushButton_gera")
         self.pushButton_copiar_2 = QtWidgets.QPushButton(self.centralwidget)
         self.pushButton_copiar_2.setGeometry(QtCore.QRect(260, 430, 131, 41))
@@ -108,8 +106,7 @@ class Tela_gerar_senha(object):
         font.setBold(True)
         font.setWeight(75)
         self.pushButton_copiar_2.setFont(font)
-        self.pushButton_copiar_2.setStyleSheet("background: #0BAEE1; \n"
-"border-radius: 10px;")
+        self.pushButton_copiar_2.setStyleSheet("QPushButton{ background: #0BAEE1;border-radius: 10px;}QPushButton:hover{color: white;}")
         self.pushButton_copiar_2.setObjectName("pushButton_copiar_2")
         self.Logo = QtWidgets.QLabel(self.centralwidget)
         self.Logo.setGeometry(QtCore.QRect(20, 20, 131, 41))

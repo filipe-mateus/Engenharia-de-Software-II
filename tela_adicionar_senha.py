@@ -39,8 +39,7 @@ class Tela_adicionar_senha(object):
         font.setBold(True)
         font.setWeight(75)
         self.pushButton_salva.setFont(font)
-        self.pushButton_salva.setStyleSheet("background: #0BAEE1; \n"
-"border-radius: 10px;")
+        self.pushButton_salva.setStyleSheet("QPushButton{ background: #0BAEE1;border-radius: 10px;}QPushButton:hover{color: white;}")
         self.pushButton_salva.setObjectName("pushButton_salva")
         self.pushButton_cancelar = QtWidgets.QPushButton(self.centralwidget)
         self.pushButton_cancelar.setGeometry(QtCore.QRect(350, 350, 91, 41))
@@ -48,8 +47,7 @@ class Tela_adicionar_senha(object):
         font.setBold(True)
         font.setWeight(75)
         self.pushButton_cancelar.setFont(font)
-        self.pushButton_cancelar.setStyleSheet("background: rgb(156, 156, 156);\n"
-"border-radius: 10px;")
+        self.pushButton_cancelar.setStyleSheet("QPushButton{ background: #0BAEE1;border-radius: 10px;}QPushButton:hover{color: white;}")
         self.pushButton_cancelar.setObjectName("pushButton_cancelar")
         self.label_url = QtWidgets.QLabel(self.centralwidget)
         self.label_url.setGeometry(QtCore.QRect(140, 170, 61, 21))
@@ -125,8 +123,7 @@ class Tela_adicionar_senha(object):
         font.setBold(True)
         font.setWeight(75)
         self.pushButton_voltar.setFont(font)
-        self.pushButton_voltar.setStyleSheet("background: #0BAEE1; \n"
-"border-radius: 10px;")
+        self.pushButton_voltar.setStyleSheet("QPushButton{ background: #0BAEE1;border-radius: 10px;}QPushButton:hover{color: white;}")
         self.pushButton_voltar.setObjectName("pushButton_voltar")
         self.Logo = QtWidgets.QLabel(self.centralwidget)
         self.Logo.setGeometry(QtCore.QRect(20, 10, 131, 41))

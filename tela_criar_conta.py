@@ -23,8 +23,7 @@ class Tela_criar_conta(object):
         font = QtGui.QFont()
         font.setPointSize(15)
         self.botao_criar.setFont(font)
-        self.botao_criar.setStyleSheet("background: #0BAEE1;\n"
-"border-radius: 10px;")
+        self.botao_criar.setStyleSheet("QPushButton{ background: #0BAEE1;border-radius: 10px;}QPushButton:hover{color: white;}")
         self.botao_criar.setObjectName("botao_criar")
         self.Logo = QtWidgets.QLabel(self.centralwidget)
         self.Logo.setGeometry(QtCore.QRect(30, 10, 131, 41))
@@ -93,8 +92,7 @@ class Tela_criar_conta(object):
         font = QtGui.QFont()
         font.setPointSize(15)
         self.botao_voltar.setFont(font)
-        self.botao_voltar.setStyleSheet("background: #0BAEE1;\n"
-"border-radius: 10px;")
+        self.botao_voltar.setStyleSheet("QPushButton{ background: #0BAEE1;border-radius: 10px;}QPushButton:hover{color: white;}")
         self.botao_voltar.setObjectName("botao_voltar")
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(MainWindow)

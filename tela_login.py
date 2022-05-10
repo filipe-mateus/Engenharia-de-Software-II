@@ -23,8 +23,7 @@ class Tela_login(object):
         font = QtGui.QFont()
         font.setPointSize(15)
         self.botaoEntrar.setFont(font)
-        self.botaoEntrar.setStyleSheet("background: #0BAEE1;\n"
-"border-radius: 10px;")
+        self.botaoEntrar.setStyleSheet("QPushButton{ background: #0BAEE1;border-radius: 10px;}QPushButton:hover{color: white;}")
         self.botaoEntrar.setObjectName("botaoEntrar")
         self.Logo = QtWidgets.QLabel(self.centralwidget)
         self.Logo.setGeometry(QtCore.QRect(30, 10, 131, 41))
