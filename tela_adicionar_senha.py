@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'tela_adicionar_senha.ui'
+# Form implementation generated from reading ui file '.\tela_adicionar_senha.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.4
 #
@@ -14,7 +14,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(640, 480)
+        MainWindow.resize(719, 577)
         font = QtGui.QFont()
         font.setBold(True)
         font.setWeight(75)
@@ -26,15 +26,15 @@ class Ui_MainWindow(object):
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.labe_adc_senha = QtWidgets.QLabel(self.centralwidget)
-        self.labe_adc_senha.setGeometry(QtCore.QRect(210, 90, 231, 31))
+        self.labe_adc_senha.setGeometry(QtCore.QRect(240, 100, 231, 31))
         font = QtGui.QFont()
         font.setPointSize(20)
-        font.setBold(False)
-        font.setWeight(50)
+        font.setBold(True)
+        font.setWeight(75)
         self.labe_adc_senha.setFont(font)
         self.labe_adc_senha.setObjectName("labe_adc_senha")
         self.pushButton_salva = QtWidgets.QPushButton(self.centralwidget)
-        self.pushButton_salva.setGeometry(QtCore.QRect(450, 300, 71, 31))
+        self.pushButton_salva.setGeometry(QtCore.QRect(450, 350, 91, 41))
         font = QtGui.QFont()
         font.setBold(True)
         font.setWeight(75)
@@ -42,58 +42,58 @@ class Ui_MainWindow(object):
         self.pushButton_salva.setStyleSheet("background: #0BAEE1; \n"
 "border-radius: 10px;")
         self.pushButton_salva.setObjectName("pushButton_salva")
-        self.pushButton_2 = QtWidgets.QPushButton(self.centralwidget)
-        self.pushButton_2.setGeometry(QtCore.QRect(360, 300, 71, 31))
+        self.pushButton_cancelar = QtWidgets.QPushButton(self.centralwidget)
+        self.pushButton_cancelar.setGeometry(QtCore.QRect(350, 350, 91, 41))
         font = QtGui.QFont()
         font.setBold(True)
         font.setWeight(75)
-        self.pushButton_2.setFont(font)
-        self.pushButton_2.setStyleSheet("background: rgb(156, 156, 156);\n"
+        self.pushButton_cancelar.setFont(font)
+        self.pushButton_cancelar.setStyleSheet("background: rgb(156, 156, 156);\n"
 "border-radius: 10px;")
-        self.pushButton_2.setObjectName("pushButton_2")
+        self.pushButton_cancelar.setObjectName("pushButton_cancelar")
         self.label_url = QtWidgets.QLabel(self.centralwidget)
-        self.label_url.setGeometry(QtCore.QRect(140, 140, 61, 21))
+        self.label_url.setGeometry(QtCore.QRect(140, 170, 61, 21))
         font = QtGui.QFont()
-        font.setPointSize(10)
+        font.setPointSize(13)
         font.setBold(True)
         font.setWeight(75)
         self.label_url.setFont(font)
         self.label_url.setObjectName("label_url")
         self.label_nam_usuario = QtWidgets.QLabel(self.centralwidget)
-        self.label_nam_usuario.setGeometry(QtCore.QRect(140, 210, 181, 16))
+        self.label_nam_usuario.setGeometry(QtCore.QRect(140, 250, 181, 16))
         font = QtGui.QFont()
-        font.setPointSize(10)
+        font.setPointSize(13)
         font.setBold(True)
         font.setWeight(75)
         self.label_nam_usuario.setFont(font)
         self.label_nam_usuario.setObjectName("label_nam_usuario")
         self.label_pswd_sit = QtWidgets.QLabel(self.centralwidget)
-        self.label_pswd_sit.setGeometry(QtCore.QRect(360, 210, 181, 16))
+        self.label_pswd_sit.setGeometry(QtCore.QRect(360, 250, 181, 16))
         font = QtGui.QFont()
-        font.setPointSize(10)
+        font.setPointSize(13)
         font.setBold(True)
         font.setWeight(75)
         self.label_pswd_sit.setFont(font)
         self.label_pswd_sit.setObjectName("label_pswd_sit")
         self.label_categori = QtWidgets.QLabel(self.centralwidget)
-        self.label_categori.setGeometry(QtCore.QRect(140, 280, 181, 16))
+        self.label_categori.setGeometry(QtCore.QRect(140, 330, 181, 21))
         font = QtGui.QFont()
-        font.setPointSize(10)
+        font.setPointSize(13)
         font.setBold(True)
         font.setWeight(75)
         self.label_categori.setFont(font)
         self.label_categori.setObjectName("label_categori")
-        self.lineEdit_sit = QtWidgets.QLineEdit(self.centralwidget)
-        self.lineEdit_sit.setGeometry(QtCore.QRect(130, 160, 401, 31))
-        self.lineEdit_sit.setStyleSheet("border-style: outset;\n"
+        self.lineEdit_url = QtWidgets.QLineEdit(self.centralwidget)
+        self.lineEdit_url.setGeometry(QtCore.QRect(130, 190, 411, 41))
+        self.lineEdit_url.setStyleSheet("border-style: outset;\n"
 "\n"
 "border-width: 2px;\n"
 "border-radius: 10px;\n"
 "border-color: rgb(156, 156, 156);\n"
 "")
-        self.lineEdit_sit.setObjectName("lineEdit_sit")
+        self.lineEdit_url.setObjectName("lineEdit_url")
         self.lineEdit_categori = QtWidgets.QLineEdit(self.centralwidget)
-        self.lineEdit_categori.setGeometry(QtCore.QRect(130, 300, 201, 31))
+        self.lineEdit_categori.setGeometry(QtCore.QRect(130, 350, 211, 41))
         self.lineEdit_categori.setStyleSheet("border-style: outset;\n"
 "\n"
 "border-width: 2px;\n"
@@ -102,7 +102,7 @@ class Ui_MainWindow(object):
 "")
         self.lineEdit_categori.setObjectName("lineEdit_categori")
         self.lineEdit_pswd_sit = QtWidgets.QLineEdit(self.centralwidget)
-        self.lineEdit_pswd_sit.setGeometry(QtCore.QRect(350, 230, 181, 31))
+        self.lineEdit_pswd_sit.setGeometry(QtCore.QRect(350, 270, 191, 41))
         self.lineEdit_pswd_sit.setStyleSheet("border-style: outset;\n"
 "\n"
 "border-width: 2px;\n"
@@ -111,7 +111,7 @@ class Ui_MainWindow(object):
 "")
         self.lineEdit_pswd_sit.setObjectName("lineEdit_pswd_sit")
         self.lineEdit_nam_usuari = QtWidgets.QLineEdit(self.centralwidget)
-        self.lineEdit_nam_usuari.setGeometry(QtCore.QRect(130, 230, 201, 31))
+        self.lineEdit_nam_usuari.setGeometry(QtCore.QRect(130, 270, 211, 41))
         self.lineEdit_nam_usuari.setStyleSheet("border-style: outset;\n"
 "\n"
 "border-width: 2px;\n"
@@ -119,9 +119,27 @@ class Ui_MainWindow(object):
 "border-color: rgb(156, 156, 156);\n"
 "")
         self.lineEdit_nam_usuari.setObjectName("lineEdit_nam_usuari")
+        self.pushButton_voltar = QtWidgets.QPushButton(self.centralwidget)
+        self.pushButton_voltar.setGeometry(QtCore.QRect(580, 30, 91, 41))
+        font = QtGui.QFont()
+        font.setBold(True)
+        font.setWeight(75)
+        self.pushButton_voltar.setFont(font)
+        self.pushButton_voltar.setStyleSheet("background: #0BAEE1; \n"
+"border-radius: 10px;")
+        self.pushButton_voltar.setObjectName("pushButton_voltar")
+        self.Logo = QtWidgets.QLabel(self.centralwidget)
+        self.Logo.setGeometry(QtCore.QRect(20, 10, 131, 41))
+        font = QtGui.QFont()
+        font.setPointSize(24)
+        font.setBold(True)
+        font.setWeight(75)
+        self.Logo.setFont(font)
+        self.Logo.setLayoutDirection(QtCore.Qt.LeftToRight)
+        self.Logo.setObjectName("Logo")
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(MainWindow)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 640, 21))
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 719, 21))
         self.menubar.setObjectName("menubar")
         MainWindow.setMenuBar(self.menubar)
         self.statusbar = QtWidgets.QStatusBar(MainWindow)
@@ -136,11 +154,13 @@ class Ui_MainWindow(object):
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
         self.labe_adc_senha.setText(_translate("MainWindow", "Adicionar senha "))
         self.pushButton_salva.setText(_translate("MainWindow", "Salvar"))
-        self.pushButton_2.setText(_translate("MainWindow", "cancelar"))
+        self.pushButton_cancelar.setText(_translate("MainWindow", "Cancelar"))
         self.label_url.setText(_translate("MainWindow", "URL:"))
         self.label_nam_usuario.setText(_translate("MainWindow", "Nome de usuário: "))
         self.label_pswd_sit.setText(_translate("MainWindow", "Senha site:"))
-        self.label_categori.setText(_translate("MainWindow", "Categoria"))
+        self.label_categori.setText(_translate("MainWindow", "Categoria:"))
+        self.pushButton_voltar.setText(_translate("MainWindow", "Voltar"))
+        self.Logo.setText(_translate("MainWindow", "PassKay"))
 
 
 if __name__ == "__main__":

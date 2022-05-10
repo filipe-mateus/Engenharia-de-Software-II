@@ -6,22 +6,22 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>638</width>
-    <height>600</height>
+    <width>715</width>
+    <height>681</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color: rgb(255, 255, 255);</string>
+   <string notr="true"/>
   </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QPushButton" name="botaoEntrar">
     <property name="geometry">
      <rect>
-      <x>260</x>
-      <y>340</y>
+      <x>280</x>
+      <y>360</y>
       <width>131</width>
       <height>41</height>
      </rect>
@@ -62,13 +62,13 @@ border-radius: 10px;</string>
      <string>PassKay</string>
     </property>
    </widget>
-   <widget class="QLineEdit" name="lineEdit_usuario">
+   <widget class="QLineEdit" name="lineEdit_codigo">
     <property name="geometry">
      <rect>
-      <x>200</x>
-      <y>230</y>
+      <x>210</x>
+      <y>290</y>
       <width>261</width>
-      <height>31</height>
+      <height>41</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -78,68 +78,12 @@ border-radius: 10px;
 border-color: rgb(156, 156, 156);</string>
     </property>
    </widget>
-   <widget class="QLineEdit" name="lineEdit_senha">
-    <property name="geometry">
-     <rect>
-      <x>200</x>
-      <y>290</y>
-      <width>261</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">border-radius: 10px;
-border-style: outset;
-border-width: 2px;
-border-color: rgb(156, 156, 156);</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_usuario">
+   <widget class="QLabel" name="label_msg">
     <property name="geometry">
      <rect>
       <x>100</x>
       <y>230</y>
-      <width>91</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>15</pointsize>
-      <weight>75</weight>
-      <bold>true</bold>
-     </font>
-    </property>
-    <property name="text">
-     <string>Usuario:</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_senha">
-    <property name="geometry">
-     <rect>
-      <x>110</x>
-      <y>290</y>
-      <width>81</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>15</pointsize>
-      <weight>75</weight>
-      <bold>true</bold>
-     </font>
-    </property>
-    <property name="text">
-     <string>Senha:</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_login">
-    <property name="geometry">
-     <rect>
-      <x>290</x>
-      <y>170</y>
-      <width>81</width>
+      <width>521</width>
       <height>31</height>
      </rect>
     </property>
@@ -151,7 +95,7 @@ border-color: rgb(156, 156, 156);</string>
      </font>
     </property>
     <property name="text">
-     <string>Login</string>
+     <string>Insira o código enviado no seu e-mail:</string>
     </property>
    </widget>
   </widget>
@@ -160,7 +104,7 @@ border-color: rgb(156, 156, 156);</string>
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>638</width>
+     <width>715</width>
      <height>21</height>
     </rect>
    </property>

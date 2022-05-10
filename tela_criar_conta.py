@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'tela_criarConta.ui'
+# Form implementation generated from reading ui file '.\tela_criarConta.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.4
 #
@@ -15,7 +15,7 @@ class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
         MainWindow.resize(812, 623)
-        MainWindow.setStyleSheet("background-color: rgb(255, 255, 255);")
+        MainWindow.setStyleSheet("")
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.botao_criar = QtWidgets.QPushButton(self.centralwidget)
@@ -88,6 +88,14 @@ class Ui_MainWindow(object):
         font.setWeight(75)
         self.label_confirmarSenha.setFont(font)
         self.label_confirmarSenha.setObjectName("label_confirmarSenha")
+        self.botao_voltar = QtWidgets.QPushButton(self.centralwidget)
+        self.botao_voltar.setGeometry(QtCore.QRect(660, 30, 111, 41))
+        font = QtGui.QFont()
+        font.setPointSize(15)
+        self.botao_voltar.setFont(font)
+        self.botao_voltar.setStyleSheet("background: #0BAEE1;\n"
+"border-radius: 10px;")
+        self.botao_voltar.setObjectName("botao_voltar")
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(MainWindow)
         self.menubar.setGeometry(QtCore.QRect(0, 0, 812, 21))
@@ -109,6 +117,7 @@ class Ui_MainWindow(object):
         self.label_senha.setText(_translate("MainWindow", "Senha:"))
         self.label_ciarConta.setText(_translate("MainWindow", "Criar conta"))
         self.label_confirmarSenha.setText(_translate("MainWindow", "Confirmar senha:"))
+        self.botao_voltar.setText(_translate("MainWindow", "Voltar"))
 
 
 if __name__ == "__main__":

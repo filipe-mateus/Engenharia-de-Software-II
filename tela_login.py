@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'tela_login.ui'
+# Form implementation generated from reading ui file '.\tela_login.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.4
 #
@@ -15,7 +15,7 @@ class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
         MainWindow.resize(638, 600)
-        MainWindow.setStyleSheet("background-color: rgb(255, 255, 255);")
+        MainWindow.setStyleSheet("")
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.botaoEntrar = QtWidgets.QPushButton(self.centralwidget)
@@ -73,6 +73,14 @@ class Ui_MainWindow(object):
         font.setWeight(75)
         self.label_login.setFont(font)
         self.label_login.setObjectName("label_login")
+        self.botaoEntrar_2 = QtWidgets.QPushButton(self.centralwidget)
+        self.botaoEntrar_2.setGeometry(QtCore.QRect(260, 400, 131, 41))
+        font = QtGui.QFont()
+        font.setPointSize(15)
+        self.botaoEntrar_2.setFont(font)
+        self.botaoEntrar_2.setStyleSheet("background: #0BAEE1;\n"
+"border-radius: 10px;")
+        self.botaoEntrar_2.setObjectName("botaoEntrar_2")
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(MainWindow)
         self.menubar.setGeometry(QtCore.QRect(0, 0, 638, 21))
@@ -93,6 +101,7 @@ class Ui_MainWindow(object):
         self.label_usuario.setText(_translate("MainWindow", "Usuario:"))
         self.label_senha.setText(_translate("MainWindow", "Senha:"))
         self.label_login.setText(_translate("MainWindow", "Login"))
+        self.botaoEntrar_2.setText(_translate("MainWindow", "Cadastre-se"))
 
 
 if __name__ == "__main__":

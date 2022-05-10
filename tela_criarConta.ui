@@ -14,7 +14,7 @@
    <string>MainWindow</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color: rgb(255, 255, 255);</string>
+   <string notr="true"/>
   </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QPushButton" name="botao_criar">
@@ -188,6 +188,28 @@ border-color: rgb(156, 156, 156);</string>
     </property>
     <property name="text">
      <string>Confirmar senha:</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="botao_voltar">
+    <property name="geometry">
+     <rect>
+      <x>660</x>
+      <y>30</y>
+      <width>111</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>15</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background: #0BAEE1;
+border-radius: 10px;</string>
+    </property>
+    <property name="text">
+     <string>Voltar</string>
     </property>
    </widget>
   </widget>
