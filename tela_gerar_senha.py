@@ -166,7 +166,7 @@ class Tela_gerar_senha(object):
         self.checkBox_numero.setText(_translate("MainWindow", "Números"))
         self.pushButton_copiar.setText(_translate("MainWindow", "Copiar"))
         self.pushButton_gera.setText(_translate("MainWindow", "Gerar"))
-        self.pushButton_copiar_2.setText(_translate("MainWindow", "Gerar senha"))
+        self.pushButton_copiar_2.setText(_translate("MainWindow", "Salvar senha"))
         self.Logo.setText(_translate("MainWindow", "PassKay"))
         self.checkBox.setText(_translate("MainWindow", "Caracteres especiais"))
 

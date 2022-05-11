@@ -5,14 +5,14 @@ import os
 from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtWidgets import QMainWindow, QApplication, QFileDialog, QMessageBox
 from PyQt5.QtCore import QCoreApplication
+from cadastro import Cadastro
 
 from tela_adicionar_senha import Tela_adicionar_senha
 from tela_autenticacao import Tela_autentica
 from tela_criar_conta import Tela_criar_conta
 from tela_gerar_senha import Tela_gerar_senha
 from tela_login import Tela_login
-
-
+from usuario import *
 
 
 class Ui_Main(QtWidgets.QWidget):
@@ -29,20 +29,20 @@ class Ui_Main(QtWidgets.QWidget):
         self.stack4 = QtWidgets.QMainWindow()
 
 
-        self.Tela = Tela_login()
-        self.Tela.setupUi(self.stack0)
+        self.login = Tela_login()
+        self.login.setupUi(self.stack0)
 
-        self.cadastro = Tela_criar_conta()
-        self.cadastro.setupUi(self.stack1)
+        self.criar_conta = Tela_criar_conta()
+        self.criar_conta.setupUi(self.stack1)
 
-        self.busca = Tela_gerar_senha()
-        self.busca.setupUi(self.stack2)
+        self.gerar_senha = Tela_gerar_senha()
+        self.gerar_senha.setupUi(self.stack2)
 
-        self.busca = Tela_autentica()
-        self.busca.setupUi(self.stack3)
+        self.autentica = Tela_autentica()
+        self.autentica.setupUi(self.stack3)
 
-        self.busca = Tela_adicionar_senha()
-        self.busca.setupUi(self.stack4)
+        self.adicionar_senha = Tela_adicionar_senha()
+        self.adicionar_senha.setupUi(self.stack4)
 
         self.QtStack.addWidget(self.stack0)
         self.QtStack.addWidget(self.stack1)
@@ -56,35 +56,55 @@ class Main(QMainWindow, Ui_Main):
         super(Main, self).__init__(parent)
         self.setupUi(self)
 
+        self.usuarios = []
         
-        self.Tela.botaoEntrar_cadastresse.clicked.connect(self.abrir_tela_criar_conta)
-        #self.Tela.pushButton_2.clicked.connect(self.abrirTelaBusca)
+        
+        self.login.botaoEntrar_cadastresse.clicked.connect(self.abrir_tela_criar_conta)
+        self.login.botaoEntrar.clicked.connect(self.abrir_tela_gerar_senha)
 
-        #self.cadastro.pushButton_6.clicked.connect(self.botaoCadastra)
+        self.criar_conta.botao_criar.clicked.connect(self.botao_criar)
         #self.busca.pushButton_5.clicked.connect(self.botaoBusca)
-        #self.busca.pushButton_voltar.clicked.connect(self.botaoVoltar)
+        self.criar_conta.botao_voltar.clicked.connect(self.botaoVoltar)
+        self.gerar_senha.pushButton_copiar_2.clicked.connect(self.abrir_tela_adiciona_senha)
 
-    #botaoVoltar = lambda self: self.QtStack.setCurrentIndex(0)
-    '''
-    def botaoCadastra(self):
-        nome = self.cadastro.lineEdit.text()
-        endereco = self.cadastro.lineEdit_2.text()
-        cpf = self.cadastro.lineEdit_3.text()
-        nascimento = self.cadastro.lineEdit_4.text()
-        if not (nome == '' or endereco == '' or cpf == '' or nascimento == ''):
-            p = Pessoa(nome,endereco,cpf,nascimento)
-            if (self.cad.cadastra(p)):
-                QMessageBox.information(None, 'POOII', 'Cadastro realizado com sucesso!')
-                self.cadastro.lineEdit.setText('')
-                self.cadastro.lineEdit_2.setText('')
-                self.cadastro.lineEdit_3.setText('')
-                self.cadastro.lineEdit_4.setText('')
+    botaoVoltar = lambda self: self.QtStack.setCurrentIndex(0)
+
+    def email_existe(self, usuario):
+        for i in self.usuarios:
+            if(i.email == usuario.email):
+                return True
+            
+    
+    def botao_criar(self):
+        email = self.criar_conta.lineEdit_email.text()
+        senha = self.criar_conta.lineEdit_senha.text()
+        confirmar_senha = self.criar_conta.lineEdit_confirmarSenha.text()
+        
+        if not (email == '' or senha == '' or confirmar_senha == ''):
+            if (senha == confirmar_senha):
+                if (self.email_existe):
+                    usuario = Usuario(email, senha)
+                    self.usuarios.append(usuario)
+                    QMessageBox.information(None, 'Passkey', 'Cadastro realizado com sucesso!')
+                    self.criar_conta.lineEdit_email.setText('')
+                    self.criar_conta.lineEdit_senha.setText('')
+                    self.criar_conta.lineEdit_confirmarSenha.setText('')
+                    flag = 0
+                else:
+                    QMessageBox.information(None, 'Passkey', 'O email informado ja está cadastrado!')
+                    flag = 1
             else:
-                QMessageBox.information(None, 'POOII', 'O cpf informado ja está cadastrado!')
+                QMessageBox.information(None, 'Passkey', 'As senhas não são iguais, tente novamente!')
+                flag = 1
         else:
-            QMessageBox.information(None, 'POOII', 'Todos os valores devem ser preenchidos!')
+            QMessageBox.information(None, 'Passkey', 'Todos os valores devem ser preenchidos!')
+            flag = 1
 
-        self.QtStack.setCurrentIndex(0)
+        if (flag == 1):
+            self.QtStack.setCurrentIndex(1)
+        else:
+            self.QtStack.setCurrentIndex(0)
+
 
     def botaoBusca(self):
         cpf = self.busca.lineEdit_5.text()
@@ -96,42 +116,15 @@ class Main(QMainWindow, Ui_Main):
         else:
             QMessageBox.information(None, 'POOII', 'CPF NAO ENCONTRADO!')
 
-'''
     def abrir_tela_criar_conta(self):
         self.QtStack.setCurrentIndex(1)
-'''
-    def abrirTelaBusca(self):
+
+    def abrir_tela_gerar_senha(self):
         self.QtStack.setCurrentIndex(2)
 
+    def abrir_tela_adiciona_senha(self):
+        self.QtStack.setCurrentIndex(4)
 
-    def gerar_senha(caracteres, minusculas, maiusculas, numeros, especial):
-    minus = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j",
-             "k", "l", "m", "n", "o", "p", "q", "r", "s", "t",
-             "u", "v", "w", "x", "y", "v"]
-    maius = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J",
-             "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T",
-             "U", "V", "W", "X", "Y", "V"]
-    num = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
-    esp = ["!", "@", "#", "$", "%", "^", "&", "*"]
-    construtora = []
-    if minusculas:
-        construtora.append(minus)
-    if maiusculas:
-        construtora.append(maius)
-    if numeros:
-        construtora.append(num)
-    if especial:
-        construtora.append(esp)
-    senha = ""
-    for i in range(0, caracteres):
-        aux = random.choice(construtora)
-        senha = senha + random.choice(aux)
-
-    print("Senha: {}".format(senha))
-
-    #gerar_senha(12, True, True, True, False)
-
-    '''
 
 if __name__ == '__main__':
     app = QApplication(sys.argv)
