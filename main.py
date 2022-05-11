@@ -5,14 +5,21 @@ import os
 from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtWidgets import QMainWindow, QApplication, QFileDialog, QMessageBox
 from PyQt5.QtCore import QCoreApplication
-from cadastro import Cadastro
+
 
 from tela_adicionar_senha import Tela_adicionar_senha
 from tela_autenticacao import Tela_autentica
 from tela_criar_conta import Tela_criar_conta
 from tela_gerar_senha import Tela_gerar_senha
 from tela_login import Tela_login
-from usuario import *
+from tela_menu import Tela_menu
+
+
+#from ...src.usuario import *
+
+from src.usuario import as_init
+from src.cadastro import *
+
 
 
 class Ui_Main(QtWidgets.QWidget):
@@ -27,6 +34,7 @@ class Ui_Main(QtWidgets.QWidget):
         self.stack2 = QtWidgets.QMainWindow()
         self.stack3 = QtWidgets.QMainWindow()
         self.stack4 = QtWidgets.QMainWindow()
+        self.stack5 = QtWidgets.QMainWindow()
 
 
         self.login = Tela_login()
@@ -44,11 +52,15 @@ class Ui_Main(QtWidgets.QWidget):
         self.adicionar_senha = Tela_adicionar_senha()
         self.adicionar_senha.setupUi(self.stack4)
 
+        self.menu = Tela_menu()
+        self.menu.setupUi(self.stack5)
+
         self.QtStack.addWidget(self.stack0)
         self.QtStack.addWidget(self.stack1)
         self.QtStack.addWidget(self.stack2)
         self.QtStack.addWidget(self.stack3)
         self.QtStack.addWidget(self.stack4)
+        self.QtStack.addWidget(self.stack5)
 
 class Main(QMainWindow, Ui_Main):
 
@@ -56,7 +68,7 @@ class Main(QMainWindow, Ui_Main):
         super(Main, self).__init__(parent)
         self.setupUi(self)
 
-        self.usuarios = []
+        self.cad = Cadastro()
         
         
         self.login.botaoEntrar_cadastresse.clicked.connect(self.abrir_tela_criar_conta)
@@ -82,6 +94,7 @@ class Main(QMainWindow, Ui_Main):
         
         if not (email == '' or senha == '' or confirmar_senha == ''):
             if (senha == confirmar_senha):
+
                 if (self.email_existe):
                     usuario = Usuario(email, senha)
                     self.usuarios.append(usuario)

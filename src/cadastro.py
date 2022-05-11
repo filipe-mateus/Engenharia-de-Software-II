@@ -1,19 +1,19 @@
 class Cadastro:
 
-
+    
     def __init__(self):
-        self._lista_email = []
+        self._lista_emails = []
 
-    def cadastra(self, pessoa):
-        existe =  self.busca(pessoa.cpf)
+    def cadastra(self, usuario):
+        existe =  self.busca(usuario.email)
         if(existe == None):
-            self._lista_pessoas.append(pessoa)
+            self._lista_emails.append(usuario)
             return  True
         else:
             return False
 
     def busca(self, email):
-        for i in self._lista_email:
+        for i in self._lista_emails:
             if i.email == email:
                 return  i
         return None
