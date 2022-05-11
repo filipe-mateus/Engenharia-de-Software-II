@@ -32,8 +32,7 @@
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">background: #0BAEE1;
-border-radius: 10px;</string>
+     <string notr="true">QPushButton{ background: #0BAEE1;border-radius: 10px;}QPushButton:hover{color: white;}</string>
     </property>
     <property name="text">
      <string>Entrar</string>
@@ -59,7 +58,7 @@ border-radius: 10px;</string>
      <enum>Qt::LeftToRight</enum>
     </property>
     <property name="text">
-     <string>PassKay</string>
+     <string>PassKey</string>
     </property>
    </widget>
    <widget class="QLineEdit" name="lineEdit_codigo">

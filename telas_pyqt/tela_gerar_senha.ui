@@ -134,7 +134,7 @@ border-color: rgb(156, 156, 156);
      <string>Letras maiúsculas</string>
     </property>
    </widget>
-   <widget class="QCheckBox" name="checkBox_2">
+   <widget class="QCheckBox" name="checkBox_letra_minuscula">
     <property name="geometry">
      <rect>
       <x>150</x>
@@ -191,8 +191,7 @@ border-color: rgb(156, 156, 156);
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">background: #0BAEE1; 
-border-radius: 10px;</string>
+     <string notr="true">QPushButton{ background: #0BAEE1;border-radius: 10px;}QPushButton:hover{color: white;}</string>
     </property>
     <property name="text">
      <string>Copiar</string>
@@ -215,14 +214,13 @@ border-radius: 10px;</string>
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">background: #0BAEE1; 
-border-radius: 10px;</string>
+     <string notr="true">QPushButton{ background: #0BAEE1;border-radius: 10px;}QPushButton:hover{color: white;}</string>
     </property>
     <property name="text">
      <string>Gerar</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_copiar_2">
+   <widget class="QPushButton" name="pushButton_salvar_senha">
     <property name="geometry">
      <rect>
       <x>260</x>
@@ -239,11 +237,10 @@ border-radius: 10px;</string>
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">background: #0BAEE1; 
-border-radius: 10px;</string>
+     <string notr="true">QPushButton{ background: #0BAEE1;border-radius: 10px;}QPushButton:hover{color: white;}</string>
     </property>
     <property name="text">
-     <string>Gerar senha</string>
+     <string>Salvar senha</string>
     </property>
    </widget>
    <widget class="QLabel" name="Logo">
@@ -266,10 +263,10 @@ border-radius: 10px;</string>
      <enum>Qt::LeftToRight</enum>
     </property>
     <property name="text">
-     <string>PassKay</string>
+     <string>PassKey</string>
     </property>
    </widget>
-   <widget class="QCheckBox" name="checkBox">
+   <widget class="QCheckBox" name="checkBox_carac_especial">
     <property name="geometry">
      <rect>
       <x>150</x>
@@ -308,13 +305,13 @@ border-radius: 10px;</string>
    <zorder>label_numer_caracteres</zorder>
    <zorder>lineEdit_num_senha</zorder>
    <zorder>checkBox_letra_maiuscula</zorder>
-   <zorder>checkBox_2</zorder>
+   <zorder>checkBox_letra_minuscula</zorder>
    <zorder>checkBox_numero</zorder>
    <zorder>pushButton_copiar</zorder>
    <zorder>pushButton_gera</zorder>
-   <zorder>pushButton_copiar_2</zorder>
+   <zorder>pushButton_salvar_senha</zorder>
    <zorder>Logo</zorder>
-   <zorder>checkBox</zorder>
+   <zorder>checkBox_carac_especial</zorder>
    <zorder>lineEdit_senha</zorder>
   </widget>
   <widget class="QMenuBar" name="menubar">

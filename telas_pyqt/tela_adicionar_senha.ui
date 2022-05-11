@@ -68,8 +68,7 @@
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">background: #0BAEE1; 
-border-radius: 10px;</string>
+     <string notr="true">QPushButton{ background: #0BAEE1;border-radius: 10px;}QPushButton:hover{color: white;}</string>
     </property>
     <property name="text">
      <string>Salvar</string>
@@ -91,8 +90,7 @@ border-radius: 10px;</string>
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">background: rgb(156, 156, 156);
-border-radius: 10px;</string>
+     <string notr="true">QPushButton{ background: rgb(152, 152, 152);;border-radius: 10px;}QPushButton:hover{color: white;}</string>
     </property>
     <property name="text">
      <string>Cancelar</string>
@@ -266,8 +264,7 @@ border-color: rgb(156, 156, 156);
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">background: #0BAEE1; 
-border-radius: 10px;</string>
+     <string notr="true">QPushButton{ background: #0BAEE1;border-radius: 10px;}QPushButton:hover{color: white;}</string>
     </property>
     <property name="text">
      <string>Voltar</string>
@@ -293,7 +290,7 @@ border-radius: 10px;</string>
      <enum>Qt::LeftToRight</enum>
     </property>
     <property name="text">
-     <string>PassKay</string>
+     <string>PassKey</string>
     </property>
    </widget>
   </widget>
