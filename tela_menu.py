@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'tela_menu.ui'
+# Form implementation generated from reading ui file '.\tela_menu.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.4
 #
@@ -44,7 +44,7 @@ class Tela_menu(object):
         self.pushButton_salvar_senha.setStyleSheet("QPushButton{ background: #0BAEE1;border-radius: 10px;}QPushButton:hover{color: white;}")
         self.pushButton_salvar_senha.setObjectName("pushButton_salvar_senha")
         self.pushButton_gerar_senha = QtWidgets.QPushButton(self.centralwidget)
-        self.pushButton_gerar_senha.setGeometry(QtCore.QRect(210, 280, 221, 41))
+        self.pushButton_gerar_senha.setGeometry(QtCore.QRect(210, 270, 221, 41))
         font = QtGui.QFont()
         font.setPointSize(10)
         font.setBold(True)
@@ -53,7 +53,7 @@ class Tela_menu(object):
         self.pushButton_gerar_senha.setStyleSheet("QPushButton{ background: #0BAEE1;border-radius: 10px;}QPushButton:hover{color: white;}")
         self.pushButton_gerar_senha.setObjectName("pushButton_gerar_senha")
         self.pushButton_sair = QtWidgets.QPushButton(self.centralwidget)
-        self.pushButton_sair.setGeometry(QtCore.QRect(210, 340, 221, 41))
+        self.pushButton_sair.setGeometry(QtCore.QRect(210, 370, 221, 41))
         font = QtGui.QFont()
         font.setPointSize(10)
         font.setBold(True)
@@ -61,6 +61,15 @@ class Tela_menu(object):
         self.pushButton_sair.setFont(font)
         self.pushButton_sair.setStyleSheet("QPushButton{ background: #0BAEE1;border-radius: 10px;}QPushButton:hover{color: white;}")
         self.pushButton_sair.setObjectName("pushButton_sair")
+        self.pushButton_sair_2 = QtWidgets.QPushButton(self.centralwidget)
+        self.pushButton_sair_2.setGeometry(QtCore.QRect(210, 320, 221, 41))
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        font.setBold(True)
+        font.setWeight(75)
+        self.pushButton_sair_2.setFont(font)
+        self.pushButton_sair_2.setStyleSheet("QPushButton{ background: #0BAEE1;border-radius: 10px;}QPushButton:hover{color: white;}")
+        self.pushButton_sair_2.setObjectName("pushButton_sair_2")
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(MainWindow)
         self.menubar.setGeometry(QtCore.QRect(0, 0, 643, 21))
@@ -81,6 +90,7 @@ class Tela_menu(object):
         self.pushButton_salvar_senha.setText(_translate("MainWindow", "Salvar senha"))
         self.pushButton_gerar_senha.setText(_translate("MainWindow", "Gerar senha"))
         self.pushButton_sair.setText(_translate("MainWindow", "Sair"))
+        self.pushButton_sair_2.setText(_translate("MainWindow", "ver senhas"))
 
 
 if __name__ == "__main__":

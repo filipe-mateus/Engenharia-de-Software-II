@@ -10,6 +10,12 @@
     <height>598</height>
    </rect>
   </property>
+  <property name="font">
+   <font>
+    <weight>75</weight>
+    <bold>true</bold>
+   </font>
+  </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
@@ -45,6 +51,11 @@
       <width>391</width>
       <height>211</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>18</pointsize>
+     </font>
     </property>
     <property name="styleSheet">
      <string notr="true">background: rgb(156, 156, 156);
@@ -294,9 +305,42 @@ border-color: rgb(156, 156, 156);
       <height>41</height>
      </rect>
     </property>
+    <property name="font">
+     <font>
+      <pointsize>18</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
     <property name="styleSheet">
      <string notr="true">background: rgb(156, 156, 156);
 border-radius: 10px;</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_volta">
+    <property name="geometry">
+     <rect>
+      <x>490</x>
+      <y>20</y>
+      <width>131</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{ background: #0BAEE1;border-radius: 10px;}QPushButton:hover{color: white;}</string>
+    </property>
+    <property name="text">
+     <string>Voltar</string>
     </property>
    </widget>
    <zorder>label_background_cinz</zorder>
@@ -313,6 +357,7 @@ border-radius: 10px;</string>
    <zorder>Logo</zorder>
    <zorder>checkBox_carac_especial</zorder>
    <zorder>lineEdit_senha</zorder>
+   <zorder>pushButton_volta</zorder>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">

@@ -84,7 +84,7 @@
     <property name="geometry">
      <rect>
       <x>210</x>
-      <y>280</y>
+      <y>270</y>
       <width>221</width>
       <height>41</height>
      </rect>
@@ -107,7 +107,7 @@
     <property name="geometry">
      <rect>
       <x>210</x>
-      <y>340</y>
+      <y>370</y>
       <width>221</width>
       <height>41</height>
      </rect>
@@ -124,6 +124,29 @@
     </property>
     <property name="text">
      <string>Sair</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_sair_2">
+    <property name="geometry">
+     <rect>
+      <x>210</x>
+      <y>320</y>
+      <width>221</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{ background: #0BAEE1;border-radius: 10px;}QPushButton:hover{color: white;}</string>
+    </property>
+    <property name="text">
+     <string>ver senhas</string>
     </property>
    </widget>
   </widget>

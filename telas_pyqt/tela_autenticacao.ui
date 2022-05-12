@@ -20,8 +20,8 @@
    <widget class="QPushButton" name="botaoEntrar">
     <property name="geometry">
      <rect>
-      <x>280</x>
-      <y>360</y>
+      <x>490</x>
+      <y>290</y>
       <width>131</width>
       <height>41</height>
      </rect>
@@ -95,6 +95,48 @@ border-color: rgb(156, 156, 156);</string>
     </property>
     <property name="text">
      <string>Insira o código enviado no seu e-mail:</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="botaoEntrar_2">
+    <property name="geometry">
+     <rect>
+      <x>560</x>
+      <y>10</y>
+      <width>131</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>15</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{ background: #0BAEE1;border-radius: 10px;}QPushButton:hover{color: white;}</string>
+    </property>
+    <property name="text">
+     <string>voltar</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="botaoEntrar_3">
+    <property name="geometry">
+     <rect>
+      <x>270</x>
+      <y>350</y>
+      <width>131</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{ background: #0BAEE1;border-radius: 10px;}QPushButton:hover{color: white;}</string>
+    </property>
+    <property name="text">
+     <string>enviar código</string>
     </property>
    </widget>
   </widget>
