@@ -1,5 +1,6 @@
 import smtplib
 import email.message
+import random
 
 
 class Codigo_verific:

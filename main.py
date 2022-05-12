@@ -182,28 +182,28 @@ class Main(QMainWindow, Ui_Main):
     
 
     def botao_enviar_autentica(self):
-        pass
-        '''
+        
+        
         email = self.login.lineEdit_usuario.text()
         send = Codigo_verific(email)
         codigo = send.enviar_email()
         codigo = int(codigo)
         self.dic_usuario[email].codigo = codigo
         QMessageBox.information(None, 'Passkey', 'Código enviado!')
-        '''
+              
 
     def botao_entrar_autentica(self):
-        '''
+        
         email = self.login.lineEdit_usuario.text()
         codigo_digitado = self.autentica.lineEdit_codigo.text()
         codigo_digitado = int(codigo_digitado)
         if(self.dic_usuario[email].codigo == codigo_digitado):
             self.QtStack.setCurrentIndex(5)
+            self.dic_usuario[email].codigo = 0  
         else:
             QMessageBox.information(None, 'Passkey', 'Código diferente!')
-        '''
-        if(1 == 1):
-            self.QtStack.setCurrentIndex(5)
+        
+        
 
    
     
@@ -238,28 +238,32 @@ class Main(QMainWindow, Ui_Main):
         nome_usuario = self.adicionar_senha.lineEdit_nam_usuari.text()
         senha_site = self.adicionar_senha.lineEdit_pswd_sit.text()
         categoria = self.adicionar_senha.lineEdit_categori.text()
+        
+        if(url not in self.dic_usuario[email].dic_senhas_salvas):
 
-        self.dic_usuario[email].dic_senhas_salvas[url] = Dados_senha(url,nome_usuario,senha_site,categoria)
+            self.dic_usuario[email].dic_senhas_salvas[url] = Dados_senha(url,nome_usuario,senha_site,categoria)
+        
+            string_senhas = ''
 
-        string_senhas = ''
-
-        for i in self.dic_usuario[email].dic_senhas_salvas:
-            url = (self.dic_usuario[email].dic_senhas_salvas[i].url)
-            nome_usuario = (self.dic_usuario[email].dic_senhas_salvas[i].nome_usuario)
-            senha_site = (self.dic_usuario[email].dic_senhas_salvas[i].senha_site)
-            categoria = (self.dic_usuario[email].dic_senhas_salvas[i].categoria)
-            string_senhas += f"url: {url}\nnome do usuário: {nome_usuario}\nsenha do site: {senha_site}\ncategoria: {categoria}\n\n" 
-
-
-        self.senhas_salvas.textEdit.setText(string_senhas)
-
-        self.adicionar_senha.lineEdit_url.setText('')
-        self.adicionar_senha.lineEdit_nam_usuari.setText('')
-        self.adicionar_senha.lineEdit_pswd_sit.setText('')
-        self.adicionar_senha.lineEdit_categori.setText('')
+            for i in self.dic_usuario[email].dic_senhas_salvas:
+                url = (self.dic_usuario[email].dic_senhas_salvas[i].url)
+                nome_usuario = (self.dic_usuario[email].dic_senhas_salvas[i].nome_usuario)
+                senha_site = (self.dic_usuario[email].dic_senhas_salvas[i].senha_site)
+                categoria = (self.dic_usuario[email].dic_senhas_salvas[i].categoria)
+                string_senhas += f"url: {url}\nnome do usuário: {nome_usuario}\nsenha do site: {senha_site}\ncategoria: {categoria}\n\n" 
 
 
-        self.QtStack.setCurrentIndex(6)
+            self.senhas_salvas.textEdit.setText(string_senhas)
+
+            self.adicionar_senha.lineEdit_url.setText('')
+            self.adicionar_senha.lineEdit_nam_usuari.setText('')
+            self.adicionar_senha.lineEdit_pswd_sit.setText('')
+            self.adicionar_senha.lineEdit_categori.setText('')
+
+            self.QtStack.setCurrentIndex(6)
+
+        else:
+             QMessageBox.information(None, 'Passkey', 'Url já foi cadastrada!')
 
     def botao_cancelar_adiciona(self):
         self.adicionar_senha.lineEdit_url.setText('')
