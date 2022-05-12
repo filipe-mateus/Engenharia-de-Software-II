@@ -241,8 +241,6 @@ class Main(QMainWindow, Ui_Main):
 
         self.dic_usuario[email].dic_senhas_salvas[url] = Dados_senha(url,nome_usuario,senha_site,categoria)
 
-        
-
         string_senhas = ''
 
         for i in self.dic_usuario[email].dic_senhas_salvas:
